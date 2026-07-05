@@ -1,0 +1,30 @@
+Place the Stanford thyroid ultrasound dataset outside git, then pass its folder with --data_dir.
+
+Expected structure:
+
+/path/to/stanford/
+  metadata.csv
+  dataset.hdf5
+
+Expected metadata columns include:
+  annot_id
+  histopath_diagnosis
+  ti_rads_composition
+  ti_rads_echogenicity
+  ti_rads_shape
+  ti_rads_margin
+  ti_rads_echogenicfoci
+  ti_rads_level
+
+Expected HDF5 keys include:
+  image
+  annot_id
+
+Optional HDF5 keys used when available:
+  frame_num
+  mask
+
+Important label note:
+  histopath_diagnosis is already numeric in this dataset:
+  0 = benign
+  1 = malignant

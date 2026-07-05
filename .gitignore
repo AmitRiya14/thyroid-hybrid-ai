@@ -1,0 +1,14 @@
+data/
+checkpoints/
+outputs/
+gradcam_outputs/
+*.pt
+*.pth
+*.h5
+*.hdf5
+*.npz
+*.zip
+*.pkl
+__pycache__/
+.ipynb_checkpoints/
+.DS_Store

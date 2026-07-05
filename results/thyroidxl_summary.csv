@@ -1,0 +1,4 @@
+experiment,model,input,auc,accuracy,f1,sensitivity,specificity,true_negative,false_positive,false_negative,true_positive,note
+ThyroidXL A-XL,EfficientNet-B0,Ultrasound image only,0.9209,0.834912,0.818452,0.779037,0.88601,342,44,78,275,Image-only baseline
+ThyroidXL B1-XL,Hybrid EfficientNet-B0 + tabular branch,Ultrasound image + nodule position/width/height/depth,0.928709,0.848444,0.8382,0.8215,0.8731,337,49,63,290,Nodule metadata fusion
+ThyroidXL B2-XL,Hybrid EfficientNet-B0 + tabular branch,Ultrasound image + final TI-RADS category,0.9648,0.9053,0.9006,0.898,0.9119,352,34,36,317,Image + final TI-RADS category fusion; not full descriptor fusion
