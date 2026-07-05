@@ -79,6 +79,12 @@ python scripts/run_stanford_expA.py --data_dir /path/to/stanford --output_dir re
 
 This repository does not include datasets, raw ultrasound images, Stanford HDF5 files, ThyroidXL image folders, prepared `.npz` files, model checkpoints, Grad-CAM image folders, zip files, or large outputs.
 
+## License
+
+This repository is licensed under the MIT License. See the `LICENSE` file for details.
+
+This license applies only to the code, documentation, scripts, and repository materials created for this project. It does not apply to the Stanford AIMI Thyroid Ultrasound Cine-clip dataset, the ThyroidXL dataset, or any third-party datasets, papers, images, or external resources cited or used in this project. Users must obtain datasets from their official sources and follow their respective terms of use.
+
 ## Disclaimer
 
 This is a research project and not a clinical diagnostic tool.
