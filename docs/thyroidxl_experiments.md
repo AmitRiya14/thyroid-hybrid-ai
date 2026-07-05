@@ -1,5 +1,9 @@
 # ThyroidXL Experiments
 
+Project: Evaluating the Diagnostic and Explainability Impact of Adding TI-RADS Score to Deep Learning for Thyroid Nodule Malignancy Classification
+
+The ThyroidXL dataset is not included in this repository. Users should cite the official ThyroidXL paper and follow the dataset's official access and use terms.
+
 ## Experiment A-XL
 
 Image-only EfficientNet-B0 baseline using ultrasound image input only.

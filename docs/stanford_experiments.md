@@ -1,5 +1,9 @@
 # Stanford Experiments
 
+Project: Evaluating the Diagnostic and Explainability Impact of Adding TI-RADS Score to Deep Learning for Thyroid Nodule Malignancy Classification
+
+The Stanford AIMI Thyroid Ultrasound Cine-clip dataset is not included in this repository. Users must obtain access through the official Redivis source and follow its terms of use.
+
 ## Experiment A
 
 Image-only EfficientNet-B0 using 5 representative frames per patient. Frames are selected from the central portion of each clip, patients are split at patient level, and test prediction is averaged across each patient's selected frames.

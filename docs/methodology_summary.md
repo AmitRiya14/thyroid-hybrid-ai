@@ -1,4 +1,4 @@
-# Methodology Summary
+# Evaluating the Diagnostic and Explainability Impact of Adding TI-RADS Score to Deep Learning for Thyroid Nodule Malignancy Classification
 
 This project compares image-only deep learning models with hybrid models that combine thyroid ultrasound images with structured nodule information.
 

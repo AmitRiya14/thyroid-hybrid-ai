@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this research software, please cite it using the metadata in this file."
+title: "Evaluating the Diagnostic and Explainability Impact of Adding TI-RADS Score to Deep Learning for Thyroid Nodule Malignancy Classification"
+type: software
+authors:
+  - family-names: Bijlani
+    given-names: Amit
+repository-code: "https://github.com/AmitRiya14/thyroid-hybrid-ai"
+url: "https://github.com/AmitRiya14/thyroid-hybrid-ai/tree/main"
+abstract: "Research code, experiment scripts, documentation, and result summaries for evaluating whether adding structured TI-RADS score information improves deep learning-based thyroid nodule malignancy classification and explainability."
+keywords:
+  - thyroid nodule
+  - ultrasound
+  - TI-RADS
+  - deep learning
+  - explainable AI
+  - research software

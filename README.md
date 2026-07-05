@@ -1,6 +1,6 @@
-# Explainable Hybrid AI for Thyroid Nodule Risk Stratification Using Ultrasound Images and TI-RADS Information
+# Evaluating the Diagnostic and Explainability Impact of Adding TI-RADS Score to Deep Learning for Thyroid Nodule Malignancy Classification
 
-This repository contains cleaned, reusable code for a thyroid ultrasound AI research project comparing image-only deep learning models with hybrid models that combine ultrasound images with TI-RADS or structured thyroid nodule information.
+This repository contains research code, experiment scripts, documentation, and result summaries for evaluating whether adding structured TI-RADS score information improves deep learning-based thyroid nodule malignancy classification and explainability.
 
 ## Research Question
 
@@ -8,10 +8,10 @@ Does combining ultrasound image AI with TI-RADS or structured nodule information
 
 ## Datasets
 
-- Stanford thyroid ultrasound dataset
+- Stanford AIMI Thyroid Ultrasound Cine-clip dataset
 - ThyroidXL dataset
 
-Datasets and medical images are not included. Users must download the Stanford and ThyroidXL datasets from their official sources and place them locally using the expected folder structures in `examples/`.
+Datasets and medical images are not included. Users must obtain access to the Stanford AIMI and ThyroidXL datasets from their official sources and place them locally using the expected folder structures in `examples/`.
 
 ## Experiments
 
@@ -39,6 +39,25 @@ ThyroidXL:
 | ThyroidXL | B2-XL | Image + final TI-RADS category | 0.9648 | 0.9053 | 0.9006 | 0.8980 | 0.9119 |
 
 The Stanford hybrid result is preliminary because the test set had only 2 malignant patients. ThyroidXL B2-XL is image + final TI-RADS category fusion, not full TI-RADS descriptor fusion.
+
+## Citation and Data Attribution
+
+This repository contains research code, experiment scripts, documentation, and result summaries for evaluating whether adding structured TI-RADS score information improves deep learning-based thyroid nodule malignancy classification and explainability.
+
+The datasets used in this project are not included in this repository. Users must obtain access to the datasets from their official sources and follow their respective terms of use.
+
+Stanford dataset citation:
+
+Stanford AIMI. (2026). Thyroid Ultrasound Cine-clip (Version 1.0) [Dataset]. Redivis. [https://stanford.redivis.com/datasets/2n5z-4m99zdpyp?v=1.0](https://stanford.redivis.com/datasets/2n5z-4m99zdpyp?v=1.0)
+
+ThyroidXL citation:
+
+Duong, V. H., Vu, H., Phan, H. D., Nguyen, D. Q., Pham, D. H., Le, Q. T., Nguyen, B. S., Do, T. D., Dinh, V. S., Nguyen, T. C., Pham, H. H., & Ngo, D. H. (2025). ThyroidXL: Advancing Thyroid Nodule Diagnosis with an Expert-Labeled, Pathology-Validated Dataset. Springer-Verlag. [https://doi.org/10.1007/978-3-032-05182-0_60](https://doi.org/10.1007/978-3-032-05182-0_60)
+
+### Data Availability
+
+* Stanford AIMI Thyroid Ultrasound Cine-clip dataset: available through Redivis at [https://stanford.redivis.com/datasets/2n5z-4m99zdpyp?v=1.0](https://stanford.redivis.com/datasets/2n5z-4m99zdpyp?v=1.0)
+* ThyroidXL dataset: cite the official ThyroidXL paper. No official dataset download URL is included in this repository.
 
 ## Install
 
