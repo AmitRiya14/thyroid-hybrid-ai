@@ -1,10 +1,10 @@
 # Evaluating the Diagnostic and Explainability Impact of Adding TI-RADS Score to Deep Learning for Thyroid Nodule Malignancy Classification
 
-This repository contains research code, experiment scripts, documentation, and result summaries for evaluating whether adding structured TI-RADS score information improves deep learning-based thyroid nodule malignancy classification and explainability.
+This repository contains research code, experiment scripts, documentation, and result summaries comparing image-only and hybrid image + TI-RADS models for diagnostic performance and explainability in thyroid nodule malignancy classification.
 
 ## Research Question
 
-Does combining ultrasound image AI with TI-RADS or structured nodule information improve benign vs malignant thyroid nodule prediction compared with image-only AI?
+Does adding structured TI-RADS information to ultrasound-based deep learning improve thyroid nodule malignancy classification, and does any performance improvement correspond to more clinically meaningful model explainability?
 
 ## Datasets
 
@@ -17,9 +17,9 @@ Datasets and medical images are not included. Users must obtain access to the St
 
 Stanford:
 
-- A: image-only EfficientNet-B0
-- B: image + TI-RADS descriptors
-- C: Grad-CAM and mask-overlap explainability
+- A: image-only model
+- B: image + TI-RADS hybrid model
+- C: explainability analysis comparing Grad-CAM attention and TI-RADS feature effects
 
 ThyroidXL:
 
@@ -39,6 +39,19 @@ ThyroidXL:
 | ThyroidXL | B2-XL | Image + final TI-RADS category | 0.9648 | 0.9053 | 0.9006 | 0.8980 | 0.9119 |
 
 The Stanford hybrid result is preliminary because the test set had only 2 malignant patients. ThyroidXL B2-XL is image + final TI-RADS category fusion, not full TI-RADS descriptor fusion.
+
+### Explainability findings
+
+Although the hybrid image + TI-RADS model improved diagnostic performance, the Grad-CAM mask-overlap analysis did not show stronger localization within the nodule mask. In the selected Stanford examples, the image-only model had higher mean CAM/mask overlap than the hybrid model. TI-RADS probability-change and permutation-importance analyses also did not identify one dominant individual TI-RADS descriptor. These findings suggest that improved classification performance does not automatically imply improved explainability.
+
+| Explainability metric | Image-only A | Hybrid B |
+|---|---:|---:|
+| Mean CAM inside mask | 0.170 | 0.159 |
+| Mean mask covered by CAM | 0.367 | 0.122 |
+| Mean IoU | 0.146 | 0.058 |
+| Frames analyzed | 6 | 6 |
+
+These explainability results are preliminary because they are based on a small selected Stanford subset.
 
 ## Citation and Data Attribution
 
