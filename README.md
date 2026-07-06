@@ -26,7 +26,7 @@ ThyroidXL:
 - A-XL: image-only EfficientNet-B0
 - B1-XL: image + nodule metadata
 - B2-XL: image + final TI-RADS category
-- C-XL: Grad-CAM and mask-overlap explainability
+- C-XL: Experiment C-XL evaluates explainability by comparing Grad-CAM attention maps from the image-only model and the image + final TI-RADS model against nodule masks.
 
 ## Main Results
 
@@ -52,6 +52,23 @@ Although the hybrid image + TI-RADS model improved diagnostic performance, the G
 | Frames analyzed | 6 | 6 |
 
 These explainability results are preliminary because they are based on a small selected Stanford subset.
+
+### ThyroidXL explainability findings
+
+Grad-CAM was used to visualize where each model focused in the ultrasound image. The Grad-CAM attention maps were compared with the nodule masks to test whether the model's visual attention aligned with the actual nodule region. This analysis compares the image-only model, Experiment A, with the strongest hybrid model, Experiment B2.
+
+| Explainability metric | Experiment A: Image only | Experiment B2: Image + final TI-RADS | Interpretation |
+|---|---:|---:|---|
+| Mean CAM inside mask | 0.076 | 0.112 | B2 placed more visual attention inside the nodule mask. |
+| Mean mask covered by CAM | 0.170 | 0.252 | B2 covered more of the actual nodule region with its Grad-CAM attention. |
+| Mean IoU | 0.115 | 0.183 | B2 had stronger overlap between Grad-CAM attention and the nodule mask. |
+| Mean Dice | 0.170 | 0.252 | B2 showed better attention-mask alignment than A. |
+| Mean inside-mask activation | 0.076 | 0.112 | B2 had stronger activation within the nodule region. |
+| Images analyzed | 2094 | 2094 | Full ThyroidXL test-image explainability set. |
+
+Unlike the smaller Stanford explainability subset, the ThyroidXL Grad-CAM analysis showed that Experiment B2 improved both diagnostic performance and visual localization. Compared with the image-only model, the image + final TI-RADS model had higher mean IoU, Dice, and inside-mask activation, suggesting that the hybrid model's attention aligned better with the annotated nodule region.
+
+Diagnostic performance was evaluated at the patient level by averaging image-level predictions for each patient. Grad-CAM explainability was evaluated at the image level because each heatmap is generated for a single ultrasound image.
 
 ## Citation and Data Attribution
 
