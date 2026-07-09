@@ -40,7 +40,7 @@ ThyroidXL:
 
 The Stanford hybrid result is preliminary because the test set had only 2 malignant patients. ThyroidXL B2-XL is image + final TI-RADS category fusion, not full TI-RADS descriptor fusion.
 
-### Explainability findings
+### Stanford explainability findings
 
 Although the hybrid image + TI-RADS model improved diagnostic performance, the Grad-CAM mask-overlap analysis did not show stronger localization within the nodule mask. In the selected Stanford examples, the image-only model had higher mean CAM/mask overlap than the hybrid model. TI-RADS probability-change and permutation-importance analyses also did not identify one dominant individual TI-RADS descriptor. These findings suggest that improved classification performance does not automatically imply improved explainability.
 
